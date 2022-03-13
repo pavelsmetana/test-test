@@ -1,3 +1,3 @@
 # test-test
-This is general Pavel`s PHP learning and testing code. Please pay no attention/
+This is Pavel`s PHP learning and testing repository. Please pay no attention/
 
