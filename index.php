@@ -8,14 +8,18 @@
 <body>
     <p> Введите дюймы: </p>
     <form action="index.php" method="post">
-    Дюймы: <input type="digit" name="inches">
-    <input type="submit" name="calculate1" id="calculate1" value="calculate!">
+    Дюймы: <input type="text" name="inches">
+    <input type="submit" name="calculate1" size="10" value="calculate!">
     </form>
 
     <?php
     if (isset($_POST[inches])) {
-        $inch = $_POST['inches'];
-        echo $inch, ' дюймов равно ',  round($inch * 2.54, 2), ' сантиметрам. ';
+        $inch2 = $_POST['inches'];
+        $inch = (double)str_replace("," , ".", $inch2);
+        if ($inch > 0){
+            echo $inch, ' дюймов равно ', round($inch * 2.54, 2), ' сантиметрам. ';
+        } else
+            echo '<p> Величина в дюймах должна быть больше нуля! </p>';
     }
     ?>
 
